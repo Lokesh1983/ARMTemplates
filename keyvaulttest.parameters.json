@@ -1,0 +1,17 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "myAdminUsername": {
+        "value": "MyAdministrator"
+      },
+      "myAdminPassword": {
+        "reference": {
+          "keyVault": {
+            "id": "/subscriptions/1f492187-e2a1-44fb-a374-f6aaaa97cab0/resourceGroups/rg1/providers/Microsoft.KeyVault/vaults/SavKeyVaultlokesh"
+          },
+          "secretName": "TestSecret"
+        }
+      }
+    }
+  }
